@@ -1,9 +1,9 @@
-<div class="container my-3">
+<div class="container" style="margin-top: 5rem;">
   <div class="row">
     <% @companies.each do |company|%>
     <div class="col-lg-4 col-md-6 col-12 mb-3">
       <div class="card my-3">
-        <%= image_tag "doctors_#{(rand 1..14).to_s}", alt: "Card image cap", class: 'card-img-top' %>
+        <%= image_tag "doctors_#{(rand 1..13).to_s}", alt: "Card image cap", class: 'card-img-top' %>
         <div class="card-body">
           <h5 class="card-title">
             <%= company.name %>

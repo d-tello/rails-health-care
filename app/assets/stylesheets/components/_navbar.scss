@@ -1,9 +1,17 @@
 .navbar {
   background: $white;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
+  padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 
 .animate {
@@ -139,7 +147,7 @@
 
 
   .navbar-menu.open {
-    height: auto;
+    height: 100vh;
     overflow: auto;
   }
 }
