@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 
 def clear_database
   puts 'Clearing database'
@@ -13,7 +14,7 @@ def clear_database
 end
 
 def create_company
-  company = Company.create!(name: 'A random name')
+  company = Company.create!(name: Faker::Artist.name)
   opening_time = Time.new(2021, 3, 31, 8)
   closing_time = Time.new(2021, 3, 31, 18)
   monday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
@@ -48,4 +49,6 @@ def create_company
 end
 
 clear_database
+9.times do
 create_company
+end
