@@ -1,0 +1,10 @@
+<div class="banner">
+  <% if params[:controller] == 'lists' && %w(index).include?(params[:action])%>
+  <h1 class="text-center py-5 text-5xl">Home page</h1>
+  <p>A Paragraph</p>
+  <% end %>
+  <% if params[:controller] == 'lists' && %w(new).include?(params[:action])%>
+  <h1 class="text-center py-5 text-5xl">Create a new list</h1>
+  <p>A Paragraph</p>
+  <% end %>
+</div>
