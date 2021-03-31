@@ -1,16 +1,27 @@
 <div class="container my-3">
-  <% @companies.each do |company|%>
-  <%= company.name %>
-  <% company.schedules.each do |schedule| %>
-  <% weekdays.each do |day|%>
-  <ul>
-    <% if day[:value] == schedule.weekday %>
-    <li>
-      <%= day[:label] %><p><%= schedule.opens_at.strftime('%k:%M') %> - <%= schedule.closes_at.strftime('%k:%M') %></p>
-    </li>
-  <% end %>
-  </ul>
-  <% end %>
-  <% end %>
-  <% end %>
+  <div class="card">
+    <%= image_tag "doctors_1", alt: "Card image cap", class: 'card-img-top' %>
+    <div class="card-body">
+      <% @companies.each do |company|%>
+      <h5 class="card-title">
+        <%= company.name %>
+      </h5>
+      <% company.schedules.each do |schedule| %>
+      <% weekdays.each do |day|%>
+      <ul>
+        <% if day[:value] == schedule.weekday %>
+        <li>
+          <%= day[:label] %>
+          <p>
+            <%= schedule.opens_at.strftime('%k:%M') %> -
+            <%= schedule.closes_at.strftime('%k:%M') %>
+          </p>
+        </li>
+        <% end %>
+      </ul>
+      <% end %>
+      <% end %>
+      <% end %>
+    </div>
+  </div>
 </div>

@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 
 # Personalised Gems
 gem 'autoprefixer-rails'
+gem 'faker'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 
