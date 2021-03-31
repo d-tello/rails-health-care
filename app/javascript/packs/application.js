@@ -15,3 +15,11 @@ ActiveStorage.start()
 // External imports
 import 'bootstrap';
 
+// Internal imports
+
+import { toggleMobileNavbar } from '../components/navbar';
+
+document.addEventListener('turbolinks:load', () => {
+  toggleMobileNavbar();
+});
+

@@ -1,7 +1,7 @@
 .navbar {
   background: $white;
-  position: fixed;
-  z-index: 100;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
 }
@@ -17,18 +17,14 @@
 }
 
 .navbar-logo {
-  float: left;
-  display: block;
   margin: 15px 0px 0px 15px;
   text-decoration: none;
 }
 
 .navbar-icon-bar {
-  float: right;
   padding: 20px;
   display: none;
   position: relative;
-  margin: 10px auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -100,7 +96,6 @@
 }
 
 .navbar-menu {
-  float: right;
   margin: 0;
   padding: 0;
 }
@@ -122,11 +117,6 @@
 }
 
 @media (max-width: 767px) {
-  .navbar {
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-  }
 
   .navbar-icon-bar {
     display: block;
@@ -149,7 +139,7 @@
 
 
   .navbar-menu.open {
-    height: 100vh;
+    height: auto;
     overflow: auto;
   }
 }
