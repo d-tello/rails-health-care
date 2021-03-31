@@ -1,5 +1,7 @@
 class CompaniesController < ApplicationController
-  def index; end
+  def index
+    @company = Company.first
+  end
 
   private
 
