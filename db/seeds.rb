@@ -14,14 +14,37 @@ end
 
 def create_company
   company = Company.create!(name: 'A random name')
-  puts "#{company.name} created"
   opening_time = Time.new(2021, 3, 31, 8)
   closing_time = Time.new(2021, 3, 31, 18)
-  schedule = Schedule.new(opens_at: opening_time.strftime('%k:%M'),
+  monday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+                        closes_at: closing_time.strftime('%k:%M'))
+  tuesday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+                         closes_at: closing_time.strftime('%k:%M'))
+  wednesday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+                           closes_at: closing_time.strftime('%k:%M'))
+  thursday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
                           closes_at: closing_time.strftime('%k:%M'))
-  schedule.company = company
-  schedule.save
-  puts "#{company.name} opens at #{schedule.opens_at} and closes at #{schedule.closes_at}"
+  friday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+                        closes_at: closing_time.strftime('%k:%M'))
+  saturday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+                          closes_at: closing_time.strftime('%k:%M'))
+  sunday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+                        closes_at: closing_time.strftime('%k:%M'))
+  monday.company = company
+  monday.save
+  tuesday.company = company
+  tuesday.save
+  wednesday.company = company
+  wednesday.save
+  thursday.company = company
+  thursday.save
+  friday.company = company
+  friday.save
+  saturday.company = company
+  saturday.save
+  sunday.company = company
+  sunday.save
+  puts "#{company.name} sucessfully created"
 end
 
 clear_database
