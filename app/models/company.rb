@@ -1,6 +1,6 @@
 class Company < ApplicationRecord
   # Associations
-  has_one :schedules
+  has_many :schedules
   accepts_nested_attributes_for :schedules, allow_destroy: true
   # Validations
   validates :name, presence: true

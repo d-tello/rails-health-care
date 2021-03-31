@@ -18,17 +18,17 @@ def create_company
   closing_time = Time.new(2021, 3, 31, 18)
   monday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
                         closes_at: closing_time.strftime('%k:%M'))
-  tuesday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+  tuesday = Schedule.new(weekday: 2, opens_at: opening_time.strftime('%k:%M'),
                          closes_at: closing_time.strftime('%k:%M'))
-  wednesday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+  wednesday = Schedule.new(weekday: 3, opens_at: opening_time.strftime('%k:%M'),
                            closes_at: closing_time.strftime('%k:%M'))
-  thursday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+  thursday = Schedule.new(weekday: 4, opens_at: opening_time.strftime('%k:%M'),
                           closes_at: closing_time.strftime('%k:%M'))
-  friday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+  friday = Schedule.new(weekday: 5, opens_at: opening_time.strftime('%k:%M'),
                         closes_at: closing_time.strftime('%k:%M'))
-  saturday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+  saturday = Schedule.new(weekday: 6, opens_at: opening_time.strftime('%k:%M'),
                           closes_at: closing_time.strftime('%k:%M'))
-  sunday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
+  sunday = Schedule.new(weekday: 7, opens_at: opening_time.strftime('%k:%M'),
                         closes_at: closing_time.strftime('%k:%M'))
   monday.company = company
   monday.save

@@ -1,6 +1,16 @@
 <div class="container my-3">
-<% @companies.each do |company|%>
-<%= company.name %>
-<% raise %>
-<% end %>
+  <% @companies.each do |company|%>
+  <%= company.name %>
+  <% company.schedules.each do |schedule| %>
+  <% weekdays.each do |day|%>
+  <ul>
+    <% if day[:value] == schedule.weekday %>
+    <li>
+      <%= day[:label] %><p><%= schedule.opens_at.strftime('%k:%M') %> - <%= schedule.closes_at.strftime('%k:%M') %></p>
+    </li>
+  <% end %>
+  </ul>
+  <% end %>
+  <% end %>
+  <% end %>
 </div>
