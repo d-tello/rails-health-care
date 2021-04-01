@@ -20,10 +20,11 @@ import 'bootstrap';
 import { toggleMobileNavbar } from '../components/navbar';
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { formDisable } from '../components/form';
+import { initFlatpickr } from "../plugins/flatpickr";
 
 document.addEventListener('turbolinks:load', () => {
   toggleMobileNavbar();
   formDisable();
   initUpdateNavbarOnScroll();
+  initFlatpickr();
 });
-

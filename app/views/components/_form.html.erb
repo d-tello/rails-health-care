@@ -27,11 +27,11 @@
           </td>
           <td scope="row">
             <%= sched.label :opens_at, class: "visually-hidden" %>
-            <%= sched.time_field :opens_at %>
+            <%= sched.input :opens_at, as: :string, required: false, input_html: {class: "datepicker"} %>
           </td>
           <td scope="row">
             <%= sched.label :closes_at, class: "visually-hidden" %>
-            <%= sched.time_field :closes_at %>
+            <%= sched.input :closes_at, as: :string, required: false, input_html: {class: "datepicker"} %>
           </td>
         </tr>
         <% end %>
