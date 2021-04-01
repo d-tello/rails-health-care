@@ -15,3 +15,18 @@
     color: $white;
   }
 }
+
+.card-img-top {
+  // width: 300px;
+  // height: 300px;
+}
+
+.weekdays_list {
+list-style-type: none;
+padding: 0px;
+}
+
+.hours_list {
+  display: flex;
+  justify-content: space-between;
+}

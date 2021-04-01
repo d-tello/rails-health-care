@@ -4,13 +4,13 @@
     <%= image_tag "doctors_#{(rand 1..13).to_s}", alt: "Card image cap", class: 'card-img-top' %>
     <div class="card-body">
       <h5 class="card-title">
-        <%= company.name %>
+        Dr. <%= company.name %>
       </h5>
-      <% company.schedules.each do |schedule| %>
-      <% weekdays.each do |day|%>
-      <ul>
+      <ul class="weekdays_list">
+        <% company.schedules.each do |schedule| %>
+        <% weekdays.each do |day|%>
         <% if day[:value] == schedule.weekday %>
-        <li>
+        <li class="hours_list">
           <%= day[:label] == Time.now.strftime("%A") ? "<b>#{day[:label]}</b>".html_safe : day[:label] %>
           <p>
             <%= schedule.opens_at.strftime('%k:%M') %> -
@@ -18,9 +18,9 @@
           </p>
         </li>
         <% end %>
+        <% end %>
+        <% end %>
       </ul>
-      <% end %>
-      <% end %>
     </div>
   </div>
 </div>
