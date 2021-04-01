@@ -15,8 +15,8 @@ end
 
 def create_company
   company = Company.create!(name: Faker::Artist.name)
-  opening_time = Time.new(2021, 3, 31, 8)
-  closing_time = Time.new(2021, 3, 31, 18)
+  opening_time = Time.new(2021, 3, 31, (rand 8..10))
+  closing_time = Time.new(2021, 3, 31, (rand 16..18))
   monday = Schedule.new(weekday: 1, opens_at: opening_time.strftime('%k:%M'),
                         closes_at: closing_time.strftime('%k:%M'))
   tuesday = Schedule.new(weekday: 2, opens_at: opening_time.strftime('%k:%M'),
