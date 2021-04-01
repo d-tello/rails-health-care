@@ -18,8 +18,10 @@ import 'bootstrap';
 // Internal imports
 
 import { toggleMobileNavbar } from '../components/navbar';
+import { formDisable } from '../components/form';
 
 document.addEventListener('turbolinks:load', () => {
   toggleMobileNavbar();
+  formDisable();
 });
 
