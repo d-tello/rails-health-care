@@ -10,6 +10,8 @@
     <span></span>
   </a>
   <ul class="navbar-menu animate">
+     <% if params[:controller] == 'companies' && %w(index).include?(params[:action])%>
     <li class="navbar-menu-item"><%= link_to 'Add new doctor', new_company_path %></li>
+  <% end %>
   </ul>
 </nav>
