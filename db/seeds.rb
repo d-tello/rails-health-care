@@ -28,9 +28,9 @@ def create_company
   friday = Schedule.new(weekday: 5, opens_at: opening_time.strftime('%k:%M'),
                         closes_at: closing_time.strftime('%k:%M'))
   saturday = Schedule.new(weekday: 6, opens_at: opening_time.strftime('%k:%M'),
-                          closes_at: closing_time.strftime('%k:%M'))
+                          closes_at: closing_time.strftime('%k:%M'), closed: true)
   sunday = Schedule.new(weekday: 7, opens_at: opening_time.strftime('%k:%M'),
-                        closes_at: closing_time.strftime('%k:%M'))
+                        closes_at: closing_time.strftime('%k:%M'), closed: true)
   monday.company = company
   monday.save
   tuesday.company = company
