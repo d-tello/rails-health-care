@@ -19,6 +19,6 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-    params.require(:company).permit(:name, schedules_attributes: %i[id opens_at closes_at weekday closed _destroy])
+    params.require(:company).permit(:name, schedules_attributes: %i[id opens_at closes_at weekday closed])
   end
 end
