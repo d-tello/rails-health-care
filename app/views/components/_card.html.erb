@@ -11,7 +11,7 @@
       <ul>
         <% if day[:value] == schedule.weekday %>
         <li>
-          <%= day[:label] %>
+          <%= day[:label] == Time.now.strftime("%A") ? "<b>#{day[:label]}</b>".html_safe : day[:label] %>
           <p>
             <%= schedule.opens_at.strftime('%k:%M') %> -
             <%= schedule.closes_at.strftime('%k:%M') %>
