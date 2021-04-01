@@ -5,31 +5,31 @@
   <div class="form-inputs">
     <%= f.input :name %>
   </div>
-  <div>
-    <table class="schedule-editor">
+  <div class="table-responsive">
+    <table class="schedule-editor table table-hover align-middle">
       <thead>
         <tr>
-          <th>Day</th>
-          <th>Opens at</th>
-          <th>Closes at</th>
+          <th scope="col">Day</th>
+          <th scope="col">Opens at</th>
+          <th scope="col">Closes at</th>
         </tr>
       </thead>
       <tbody>
         <% weekdays.each do |day| %>
         <%= f.fields_for :schedules, f.object.schedules.find_or_initialize_by(weekday: day[:value]) do |sched| %>
         <tr>
-          <td>
+          <td scope="row">
             <%= sched.hidden_field :weekday %>
-            <div class="checkbox">
+            <div class="checkbox form-check form-switch">
               <%= sched.check_box :closed, {checked: sched.object.persisted?}, false, true %>
-              <%= sched.label :closed, day[:label] %>
+              <%= sched.label :closed, day[:label], class: 'form-check-label', for: 'flexSwitchCheckDefault' %>
             </div>
           </td>
-          <td>
+          <td scope="row">
             <%= sched.label :opens_at, class: "visually-hidden" %>
             <%= sched.time_field :opens_at %>
           </td>
-          <td>
+          <td scope="row">
             <%= sched.label :closes_at, class: "visually-hidden" %>
             <%= sched.time_field :closes_at %>
           </td>

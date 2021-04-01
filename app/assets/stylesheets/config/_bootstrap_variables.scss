@@ -19,3 +19,7 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+
+$table-hover-color:           $text;
+$table-hover-bg-factor:       .075;
+$table-hover-bg:              rgba($extra, $table-hover-bg-factor);
