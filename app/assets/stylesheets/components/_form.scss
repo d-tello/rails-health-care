@@ -1,5 +1,5 @@
 .visually-hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .btn-form {
@@ -14,5 +14,16 @@
   &:hover {
     background-color: $extra;
     color: $white;
+  }
+}
+
+.schedule-editor {
+
+  th {
+    padding: 10px;
+  }
+
+  td {
+    padding: 10px;
   }
 }
