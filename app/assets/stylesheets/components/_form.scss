@@ -27,3 +27,14 @@
     padding: 10px;
   }
 }
+
+@media (max-width: 767px) {
+
+.form-check {
+  display: flex;
+}
+
+.form-check-label {
+  margin-left: 10px;
+}
+}
