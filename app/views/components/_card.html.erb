@@ -4,7 +4,8 @@
     <%= image_tag "doctors_#{(rand 1..13).to_s}", alt: "Card image cap", class: 'card-img-top' %>
     <div class="card-body">
       <h5 class="card-title">
-        Dr. <%= company.name %>
+        Dr.
+        <%= company.name %>
       </h5>
       <ul class="weekdays_list">
         <% company.schedules.each do |schedule| %>
@@ -12,10 +13,16 @@
         <% if day[:value] == schedule.weekday %>
         <li class="hours_list">
           <%= day[:label] == Time.now.strftime("%A") ? "<b>#{day[:label]}</b>".html_safe : day[:label] %>
+          <% if schedule.closed %>
+          <p>
+            <%= 'Closed' %>
+          </p>
+          <% else %>
           <p>
             <%= schedule.opens_at.strftime('%k:%M') %> -
             <%= schedule.closes_at.strftime('%k:%M') %>
           </p>
+          <% end %>
         </li>
         <% end %>
         <% end %>
