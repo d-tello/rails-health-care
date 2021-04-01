@@ -1,0 +1,18 @@
+.visually-hidden {
+  visibility: hidden;
+}
+
+.btn-form {
+
+  color: $white;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  background-color: rgba(72, 218, 252, 0.5);
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $extra;
+    color: $white;
+  }
+}
