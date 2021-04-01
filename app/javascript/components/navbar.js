@@ -12,3 +12,19 @@ const toggleMobileNavbar = () => {
 }
 
 export { toggleMobileNavbar };
+
+const initUpdateNavbarOnScroll = () => {
+  const navbar = document.querySelector('.navbar');
+
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY >= 10) {
+        navbar.classList.add('shadow');
+      } else {
+        navbar.classList.remove('shadow');
+      }
+    });
+  }
+}
+
+export { initUpdateNavbarOnScroll };
