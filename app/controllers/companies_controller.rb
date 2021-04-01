@@ -3,10 +3,14 @@ class CompaniesController < ApplicationController
     @companies = Company.all
   end
 
+  def new
+    @company = Company.new
+  end
+
   private
 
-  def service_params
-    params.require(:service).permit(
+  def company_params
+    params.require(:company).permit(
       name,
       schedules_attributes: %i[
         id
@@ -14,6 +18,7 @@ class CompaniesController < ApplicationController
         closes_at
         weekday
         _destroy
+        closed
       ]
     )
   end
