@@ -12,14 +12,7 @@ class CompaniesController < ApplicationController
   def company_params
     params.require(:company).permit(
       name,
-      schedules_attributes: %i[
-        id
-        opens_at
-        closes_at
-        weekday
-        _destroy
-        closed
-      ]
+      schedules_attributes: %i[id opens_at closes_at weekday closed _destroy]
     )
   end
 end
