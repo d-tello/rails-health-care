@@ -1,0 +1,54 @@
+.footer {
+  background: $secondary;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: $white;
+    opacity: 0.15;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0px 10px;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+}
+
+.footer-copyright a {
+  color: $white;
+  opacity: 0.15;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.footer .fa-heart {
+  color: $extra;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    margin-top: 1rem;
+  }
+
+  .footer-copyright {
+    margin-bottom: 1rem;
+  }
+}
