@@ -112,15 +112,16 @@
   display: inline-block;
 
   a {
-    color: $primary;
+    color: $white;
     display: block;
-    padding: 20px;
+    padding: 10px;
     text-decoration: none;
+    background-color: rgba(72, 218, 252, 0.5);
+    border-radius: 5px;
   }
 
   a:hover {
-    color: $primary;
-    font-weight: 700;
+    background-color: $extra;
   }
 }
 
@@ -143,6 +144,17 @@
 
   .navbar-menu-item {
     display: block;
+
+    a {
+      color: $primary;
+      background-color: $white;
+    }
+
+    a:hover {
+      color: $primary;
+      background-color: $white;
+      font-weight: bold;
+    }
   }
 
 
