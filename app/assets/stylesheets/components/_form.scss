@@ -1,5 +1,5 @@
-.visually-hidden {
-  display: none;
+.form-check {
+  padding-left: 0px !important;
 }
 
 .btn-form {
@@ -25,7 +25,7 @@
 .toggle + label {
   position: relative;
   display: inline-block;
-  padding-left: 40px;
+  padding-left: 60px;
 }
 
 .toggle + label::before {
