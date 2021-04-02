@@ -62,3 +62,20 @@
 .toggle:checked+label::after {
   left: 18px;
 }
+
+
+@media (max-width: 767px) {
+
+  .schedule-editor {
+    font-size: 12px;
+  }
+
+  .form-control .form-group>input {
+    width: 70%;
+    font-size: 10px;
+  }
+
+  .flatpickr-calendar {
+    width: 100px !important;
+  }
+}
