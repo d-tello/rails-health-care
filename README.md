@@ -1,7 +1,7 @@
 ![Banner_hc](https://user-images.githubusercontent.com/71888404/113407437-939b8400-93ad-11eb-944c-f403def87054.png)
 
 
-<a target="_blank" href="https://health-care-opening-hours.herokuapp.com/">Health Care Opening Hours</a>
+## <a target="_blank" href="https://health-care-opening-hours.herokuapp.com/">Health Care Opening Hours</a>
 
 Small Rails application designed to display the opening hours of a doctor / medical practice.
 
