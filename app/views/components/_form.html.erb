@@ -21,17 +21,14 @@
           <td scope="row">
             <%= sched.hidden_field :weekday %>
             <div class="checkbox form-check form-switch">
-              <%= sched.check_box :closed, {checked: sched.object.persisted?}, false, true %>
-              <%= sched.label :closed, day[:label], class: 'form-check-label', for: 'flexSwitchCheckDefault' %>
+              <%= sched.input :open, label: day[:label] %>
             </div>
           </td>
           <td scope="row">
-            <%= sched.label :opens_at, class: "visually-hidden" %>
-            <%= sched.input :opens_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= sched.input :opens_at, as: :string, label: false, required: false, input_html: {class: "datepicker"} %>
           </td>
           <td scope="row">
-            <%= sched.label :closes_at, class: "visually-hidden" %>
-            <%= sched.input :closes_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= sched.input :closes_at, as: :string, label: false, required: false, input_html: {class: "datepicker"} %>
           </td>
         </tr>
         <% end %>

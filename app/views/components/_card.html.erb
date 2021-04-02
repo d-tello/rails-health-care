@@ -13,7 +13,7 @@
         <% if day[:value] == schedule.weekday %>
         <li class="hours_list">
           <%= day[:label] == Time.now.strftime("%A") ? "<b>#{day[:label]}</b>".html_safe : day[:label] %>
-          <% if schedule.closed %>
+          <% if !schedule.open %>
           <p>
             <%= 'Closed' %>
           </p>
