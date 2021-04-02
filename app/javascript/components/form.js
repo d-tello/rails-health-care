@@ -8,6 +8,7 @@ const formDisable = () => {
       inputs.forEach(input => input.removeAttribute("disabled"))
     } else {
       inputs.forEach(input => input.setAttribute("disabled", "true"))
+      inputs.forEach(input => input.value = "")
     }
   }
   if (editor) {
