@@ -21,7 +21,7 @@
           <td scope="row">
             <%= sched.hidden_field :weekday %>
             <div class="checkbox form-check form-switch">
-              <%= sched.input :open, label: day[:label] %>
+              <%= sched.input :open, label: day[:label], input_html: { class: "toggle" } %>
             </div>
           </td>
           <td scope="row">

@@ -17,24 +17,48 @@
   }
 }
 
-// .schedule-editor {
-
-//   th {
-//     padding: 10px;
-//   }
-
-//   td {
-//     padding: 10px;
-//   }
-// }
-
-@media (max-width: 767px) {
-
-.form-check {
-  display: flex;
+.toggle {
+  position: absolute;
+  transform: scale(0);
 }
 
-.form-check-label {
-  margin-left: 10px;
+.toggle + label {
+  position: relative;
+  display: inline-block;
+  padding-left: 40px;
 }
+
+.toggle + label::before {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background-color: #EAEAEA;
+  border-radius: 50rem;
+}
+
+.toggle:checked + label::before {
+  background-color: $primary;
+}
+
+.toggle + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  top: 2px;
+  left: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: left 0.2s ease;
+}
+
+.toggle:checked + label::after {
+  left: 18px;
 }
