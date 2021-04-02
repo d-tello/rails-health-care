@@ -5,10 +5,11 @@
 .btn-form {
   color: $white;
   display: block;
-  padding: 10px;
+  padding: 10px 40px;
   text-decoration: none;
   background-color: rgba(72, 218, 252, 0.5);
   border-radius: 5px;
+  font-weight: bold;
 
   &:hover {
     background-color: $extra;
@@ -21,13 +22,13 @@
   transform: scale(0);
 }
 
-.toggle + label {
+.toggle+label {
   position: relative;
   display: inline-block;
   padding-left: 60px;
 }
 
-.toggle + label::before {
+.toggle+label::before {
   content: '';
   display: block;
   position: absolute;
@@ -40,11 +41,11 @@
   border-radius: 50rem;
 }
 
-.toggle:checked + label::before {
+.toggle:checked+label::before {
   background-color: $primary;
 }
 
-.toggle + label::after {
+.toggle+label::after {
   content: '';
   display: block;
   position: absolute;
@@ -58,6 +59,6 @@
   transition: left 0.2s ease;
 }
 
-.toggle:checked + label::after {
+.toggle:checked+label::after {
   left: 18px;
 }
