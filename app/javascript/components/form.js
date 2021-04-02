@@ -3,7 +3,7 @@ const formDisable = () => {
   const editor = document.querySelector(".schedule-editor")
 
   const update = checkbox => {
-    const inputs = editor.querySelectorAll("input[type='text']")
+    const inputs = checkbox.parentNode.parentNode.parentNode.parentNode.parentNode.querySelectorAll("input[type='text']")
     if (checkbox.checked) {
       inputs.forEach(input => input.removeAttribute("disabled"))
     } else {
