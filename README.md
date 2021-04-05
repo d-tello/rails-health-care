@@ -9,6 +9,8 @@ Simple and responsive design compatible with small screens.
 
 Possibility of adding a new doctor to the list with the selection of days and opening hours.
 
+Including Rspec Tests for controllers, models and routing.
+
 ## Tech
 
 <p>
